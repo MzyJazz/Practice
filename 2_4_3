@@ -2,6 +2,10 @@ str1 = input("Please insert the first sentence: ")
 str2 = input("Please insert the second sentence: ")
 
 n = len(str1)
+m = len(str2)
+if n != m
+    print("Sentences are different")
+    exit
 i = 0
 
 if str2[:i] == str1[:n] and i <= n:
