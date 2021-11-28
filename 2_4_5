@@ -7,12 +7,19 @@ Location_Brian = 0
 # Snake = 34->7,  43->17, 71->56, 76->55, 94->79, 99->74
 # ladder= 18->55, 25->40, 37->66, 45->57, 75->89, 77->97
 
-while (Location_Ali != 100 or Location_Brian != 100):
+while (Location_Ali != 100 and Location_Brian != 100):
 
     Dice_Ali2 = input("تاس بنداز ... ")
     Dice_Ali = random.randint(1, 6)
     # Location_Ali_Before = Dice_Ali
-    Location_Ali += Dice_Ali
+    if Location_Ali == 0 and Dice_Ali == 6:
+        Location_Ali += Dice_Ali
+
+    elif Location_Ali + Dice_Ali <= 100:
+        Location_Ali += Dice_Ali
+
+    if Location_Brian == Location_Ali:
+        Location_Brian = 0
 
     if Location_Ali == 34:
         Location_Ali = 7
@@ -63,7 +70,15 @@ while (Location_Ali != 100 or Location_Brian != 100):
     Dice_Brian = random.randint(1, 6)
     # print("برایان هم تاس انداخت", Dice_Brian)
 
-    Location_Brian += Dice_Brian
+    if Location_Brian == 0 and Dice_Brian != 6:
+        Location_Brian += 0
+
+    elif Location_Brian + Dice_Brian <= 100:
+        Location_Brian += Dice_Brian
+
+    if Location_Brian == Location_Ali:
+        Location_Ali = 0
+
     Location_Brian_Before = Location_Brian
 
     if Location_Brian == 34:
