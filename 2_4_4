@@ -1,0 +1,75 @@
+#  سنگ کاغذ قیچی اسپاک مارمولک
+
+import random
+
+Score_User, Score_Computer = 0, 0
+
+while (True):
+    User = input("Rock, Paper, Scissors, Lizard, Spock: ")
+    Computer = random.randint(1, 5)
+
+    if Computer == 1:
+        Computer = "Rock"
+    elif Computer == 2:
+        Computer = "Paper"
+    elif Computer == 3:
+        Computer = "Scissors"
+    elif Computer == 4:
+        Computer = "Lizard"
+    elif Computer == 5:
+        Computer = "Spock"
+
+    if User == Computer:
+        Score_User = Score_User
+        Score_Computer = Score_Computer
+    elif User == "Rock" and Computer == "Paper":
+        Score_Computer += 1
+    elif User == "Rock" and Computer == "Scissors":
+        Score_User += 1
+    elif User == "Paper" and Computer == "Rock":
+        Score_User += 1
+    elif User == "Paper" and Computer == "Scissors":
+        Score_Computer += 1
+    elif User == "Scissors" and Computer == "Rock":
+        Score_Computer += 1
+    elif User == "Scissors" and Computer == "Paper":
+        Score_User += 1
+    elif User == "Paper" and Computer == "Spock":
+        Score_User += 1
+    elif Computer == "Paper" and User == "Spock":
+        Score_Computer += 1
+    elif User == "Rock" and Computer == "Lizard":
+        Score_User += 1
+    elif Computer == "Rock" and User == "Lizard":
+        Score_Computer += 1
+    elif User == "Lizard" and Computer == "Paper":
+        Score_User += 1
+    elif User == "Lizard" and Computer == "Spock":
+        Score_User += 1
+    elif Computer == "Lizard" and User == "Paper":
+        Score_Computer += 1
+    elif Computer == "Lizard" and User == "Spock":
+        Score_Computer += 1
+    elif User == "Spock" and Computer == "Rock":
+        Score_User += 1
+    elif User == "Spock" and Computer == "Scissors":
+        Score_User += 1
+    elif Computer == "Spock" and User == "Rock":
+        Score_Computer += 1
+    elif Computer == "Spock" and User == "Scissors":
+        Score_Computer += 1
+    elif User == "Scissors" and Computer == "Lizard":
+        Score_User += 1
+    elif Computer == "Scissors" and User == "Lizard":
+        Score_Computer += 1
+
+
+    print(f"User: {User}")
+    print(f"Computer: {Computer}")
+    print("*** Score ***")
+    print(f"Score_User: {Score_User}")
+    print(f"Score_Computer: {Score_Computer} \n")
+
+    if User == "Finish":
+        break
+
