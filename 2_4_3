@@ -3,18 +3,12 @@ str2 = input("Please insert the second sentence: ")
 
 n = len(str1)
 m = len(str2)
-if n != m
+if n != m:
     print("Sentences are different")
-    exit
-i = 0
+    exit()
 
-if str2[:i] == str1[:n] and i <= n:
-    i = i+1
-    n = n-1
-    print("Reversed sentences")
-else:
-    print("Sentences are different")
-
-while str2[:i] == str1[:n] and i <= n:
-    i = i+1
-    n = n-1
+for i in range(n-1):
+    if str1[i] != str2[(n-1)-i]:
+        print("Sentences are different")
+        exit()
+print("Sentences are reversed")
