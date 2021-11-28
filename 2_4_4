@@ -1,0 +1,16 @@
+str1 = input("Please insert the first sentence: ")
+str2 = input("Please insert the second sentence: ")
+
+n = len(str1)
+i = 0
+x = 0
+if str2[i] == str1[n-i] and x <= n:
+    x += 1
+    i += 1
+else:
+    print("Sentences are different")
+    break
+while str2[i] == str1[n-i] and x <= n:
+    x += 1
+    i += 1
+
