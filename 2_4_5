@@ -1,0 +1,116 @@
+# بازی مار و پله
+import random
+
+Location_Ali = 0
+Location_Brian = 0
+
+# Snake = 34->7,  43->17, 71->56, 76->55, 94->79, 99->74
+# ladder= 18->55, 25->40, 37->66, 45->57, 75->89, 77->97
+
+while (Location_Ali != 100 or Location_Brian != 100):
+
+    Dice_Ali2 = input("تاس بنداز ... ")
+    Dice_Ali = random.randint(1, 6)
+    # Location_Ali_Before = Dice_Ali
+    Location_Ali += Dice_Ali
+
+    if Location_Ali == 34:
+        Location_Ali = 7
+
+    elif Location_Ali == 43:
+        Location_Ali = 17
+
+    elif Location_Ali == 71:
+        Location_Ali = 56
+
+    elif Location_Ali == 76:
+        Location_Ali = 55
+
+    elif Location_Ali == 94:
+        Location_Ali = 79
+
+    elif Location_Ali == 99:
+        Location_Ali = 74
+
+    # -------------------------------
+    if Location_Ali == 18:
+        Location_Ali = 55
+
+    elif Location_Ali == 25:
+        Location_Ali = 40
+
+    elif Location_Ali == 37:
+        Location_Ali = 66
+
+    elif Location_Ali == 45:
+        Location_Ali = 57
+
+    elif Location_Ali == 75:
+        Location_Ali = 89
+
+    elif Location_Ali == 77:
+        Location_Ali = 97
+
+    # print(f"Location_Ali_Before: {Location_Ali_Before}")
+    print(f"Dice_Ali: {Dice_Ali}")
+    if Location_Ali == 34 or Location_Ali == 43 or Location_Ali == 71 or Location_Ali == 76 or Location_Ali == 94 or Location_Ali == 99:
+        print("مار نیشت زد پسر")
+    elif Location_Ali == 18 or Location_Ali == 25 or Location_Ali == 37 or Location_Ali == 45 or Location_Ali == 75 or Location_Ali == 77:
+        print("از پله رفتی بالا")
+    print(f"Location_Ali_New: {Location_Ali} \n")
+
+    # ===========================================================================================================================
+    Dice_Brian = random.randint(1, 6)
+    # print("برایان هم تاس انداخت", Dice_Brian)
+
+    Location_Brian += Dice_Brian
+    Location_Brian_Before = Location_Brian
+
+    if Location_Brian == 34:
+        Location_Brian = 7
+
+    elif Location_Brian == 43:
+        Location_Brian = 17
+
+    elif Location_Brian == 71:
+        Location_Brian = 56
+
+    elif Location_Brian == 76:
+        Location_Brian = 55
+
+    elif Location_Brian == 94:
+        Location_Brian = 79
+
+    elif Location_Brian == 99:
+        Location_Brian = 74
+
+    # -------------------------------
+    if Location_Brian == 18:
+        Location_Brian = 55
+
+    elif Location_Brian == 25:
+        Location_Brian = 40
+
+    elif Location_Brian == 37:
+        Location_Brian = 66
+
+    elif Location_Brian == 45:
+        Location_Brian = 57
+
+    elif Location_Brian == 75:
+        Location_Brian = 89
+
+    elif Location_Brian == 77:
+        Location_Brian = 97
+
+    # print(f"Location_Brian_Before: {Location_Brian_Before}")
+    print(f"Dice_Brian: {Dice_Brian}")
+    if Location_Brian == 34 or Location_Brian == 43 or Location_Brian == 71 or Location_Brian == 76 or Location_Brian == 94 or Location_Brian == 99:
+        print("برایان رو مار نیش زد")
+    elif Location_Brian == 18 or Location_Brian == 25 or Location_Brian == 37 or Location_Brian == 45 or Location_Brian == 75 or Location_Brian == 77:
+        print("برایان از پله بالا رفت")
+    print(f"Location_Brian_New: {Location_Brian} \n")
+
+    if Dice_Ali2 == "n":
+        break
+
